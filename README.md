@@ -1,4 +1,4 @@
-# Python Brasil 2020 🤖 Discord
+# Uma abastração do Python Brasil 2020 🤖 Discord
 
 
 ```
