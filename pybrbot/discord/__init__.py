@@ -4,11 +4,12 @@ import os
 from collections import defaultdict
 from typing import Optional
 
+from loguru import logger
+from slugify import slugify
+
 import discord
 from discord.ext.commands import Bot
 from discord.ext.tasks import loop
-from loguru import logger
-from slugify import slugify
 
 from .utils import cmdlog
 
@@ -23,7 +24,10 @@ async def on_message(message):
     if not message.author.bot and message.content.lower() == "ce ta doido":
         await message.channel.send("https://www.youtube.com/watch?v=r696Vw4aLlE")
 
-    await bot.process_commands(message)
+    if not message.author.bot and message.content.lower() == "o lobinho!":
+        await message.channel.send("https://i.ytimg.com/vi/VD10QbfpJkU/maxresdefault.jpg")
+
+    await bot.process_commansds(message)
 
 
 @bot.event
